@@ -1,0 +1,5 @@
+.elkit-wnd {
+  overflow: hidden;
+  border: 1px solid var(--elkit-wnd-borderColor);
+  border-radius: var(--elkit-wnd-borderRadius);
+}

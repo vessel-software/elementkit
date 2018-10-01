@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+
+.elkit-demo {
+  width: 1024px;
+}
+
+.elkit-demo .elkit-wnd {
+  box-shadow: 0 0 20px #8080808c;
+}
