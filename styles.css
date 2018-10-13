@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 60px;
+}
+
+.elkit-demo {
+  width: 1024px;
+}
+
+.elkit-demo .elkit-wnd {
+  box-shadow: 0 0 20px #8080808c;
+}
+
+.elkit-fontIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.elkit-theme--light {
+  --elkit-fontFamily: 'Open Sans', sans-serif;
+  --elkit-textColor: #7a7a7a;
+
+  --elkit-wnd-borderColor: #9d9d9d;
+  --elkit-wnd-borderRadius: 4px;
+
+  --elkit-toolbar-borderBottomColor: #989898;
+  --elkit-toolbar-borderRadius: 3px;
+  --elkit-toolbar-fontFamily: var(--elkit-fontFamily);
+  --elkit-toolbar-fontSize: 12px;
+  --elkit-toolbar-fontWeight: bold;
+  --elkit-toolbar-textColor: var(--elkit-textColor);
+  --elkit-toolbar-textShadowColor: #d6d0cb;
+  --elkit-toolbar-boxShadowLeftColor: #cfcfcf;
+  --elkit-toolbar-boxShadowRightColor: #cfcfcf;
+  --elkit-toolbar-boxShadowTopColor: #f6f6f6;
+  --elkit-toolbar-boxShadowBottomColor: #cfcfcf;
+  --elkit-toolbar-gradientColorFrom: #e6e6e6;
+  --elkit-toolbar-gradientColorTo: #c4c4c4;
+}
+
+.elkit-theme--dark {
+  --elkit-fontFamily: 'Open Sans', sans-serif;
+  --elkit-textColor: #acb3b1;
+
+  --elkit-wnd-borderColor: #141414;
+  --elkit-wnd-borderRadius: 4px;
+
+  --elkit-toolbar-borderBottomColor: #222426;
+  --elkit-toolbar-borderRadius: 3px;
+  --elkit-toolbar-fontFamily: var(--elkit-fontFamily);
+  --elkit-toolbar-fontSize: 12px;
+  --elkit-toolbar-fontWeight: bold;
+  --elkit-toolbar-textColor: var(--elkit-textColor);
+  --elkit-toolbar-textShadowColor: #0000004d;
+  --elkit-toolbar-boxShadowLeftColor: #ffffff1a;
+  --elkit-toolbar-boxShadowRightColor: #ffffff1a;
+  --elkit-toolbar-boxShadowTopColor: #ffffff1a;
+  --elkit-toolbar-boxShadowBottomColor: #ffffff0d;
+  --elkit-toolbar-gradientColorFrom: #3a4144;
+  --elkit-toolbar-gradientColorTo: #323739;
+}
+
+.elkit-wnd {
+  overflow: hidden;
+  border: 1px solid var(--elkit-wnd-borderColor);
+  border-radius: var(--elkit-wnd-borderRadius);
+}
+
+.elkit-fontIcon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.elkit-toolbar {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom:
+    1px solid var(--elkit-toolbar-borderBottomColor);
+
+  border-top-left-radius: var(--elkit-toolbar-borderRadius);
+  border-top-right-radius: var(--elkit-toolbar-borderRadius);
+
+  padding: 8px;
+  padding-top: 9px;
+  font-family: var(--elkit-toolbar-fontFamily);
+  font-size: var(--elkit-toolbar-fontSize);
+  font-weight: var(--elkit-toolbar-fontWeight);
+  color: var(--elkit-toolbar-textColor);
+  text-shadow: 0 1px var(--elkit-toolbar-textShadowColor);
+
+  box-shadow:
+    0 0 1px 1px var(--elkit-toolbar-gradientColorFrom),
+    inset 1px 0px 0px 0 var(--elkit-toolbar-boxShadowLeftColor),
+    inset -1px 0px 0px 0 var(--elkit-toolbar-boxShadowRightColor),
+    inset 0 1px 0 0 var(--elkit-toolbar-boxShadowTopColor),
+    inset 0 -1px 0 0 var(--elkit-toolbar-boxShadowBottomColor);
+
+  background-image: linear-gradient(
+    to bottom,
+    var(--elkit-toolbar-gradientColorFrom),
+    var(--elkit-toolbar-gradientColorTo)
+  );
+}
+
+.elkit-toolbar-headerBtn,
+.elkit-toolbar-appIconBtn {
+  display: flex;
+  outline: 0;
+  border: 0;
+  padding: 0;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+.elkit-toolbar-headerBtn:disabled,
+.elkit-toolbar-appIconBtn:disabled {
+  opacity: 0.5;
+}
+
+.elkit-toolbar-headerBtn + .elkit-toolbar-headerBtn,
+.elkit-toolbar-headerBtn + .elkit-toolbar-appIconBtn,
+.elkit-toolbar-appIconBtn + .elkit-toolbar-headerBtn {
+  margin-left: 20px;
+}
+
+.elkit-toolbar-appIconBtn + .elkit-toolbar-appIconBtn {
+  margin-left: 15px;
+}
+
+.elkit-toolbarTitle {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
