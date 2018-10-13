@@ -11,4 +11,5 @@ body {
 
 .elkit-demo .elkit-wnd {
   box-shadow: 0 0 20px #8080808c;
+  min-height: 300px;
 }
