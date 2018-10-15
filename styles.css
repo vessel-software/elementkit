@@ -153,19 +153,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  -moz-user-select: none;
+  user-select: none;
   cursor: default;
-}
-
-.elkit-wndBody {
-  flex-grow: 1;
 }
 
 .elkit-paneGroup {
   display: flex;
 }
 
-.elkit-wndBody > .elkit-paneGroup {
-  height: 100%;
+.elkit-wnd > .elkit-paneGroup {
+  flex-grow: 1;
 }
 
 .elkit-sidebar {
@@ -185,6 +183,8 @@ body {
   padding: 18px 8px 6px;
   font-weight: bold;
   color: #707070;
+  -moz-user-select: none;
+  user-select: none;
 }
 
 .elkit-navGroup-item {
@@ -302,5 +302,7 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   text-align: center;
+  -moz-user-select: none;
+  user-select: none;
   cursor: default;
 }
