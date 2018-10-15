@@ -34,6 +34,9 @@ body {
 
   --elkit-sidebar-fontFamily: var(--elkit-fontFamily);
   --elkit-sidebar-fontSize: 12px;
+
+  --elkit-tabs-fontFamily: var(--elkit-fontFamily);
+  --elkit-tabs-fontSize: 11.5px;
 }
 
 .elkit-theme--light {
@@ -174,6 +177,10 @@ body {
   background-color: #e2e2e2;
 }
 
+.elkit-pane {
+  flex-grow: 1;
+}
+
 .elkit-navGroup-title {
   padding: 18px 8px 6px;
   font-weight: bold;
@@ -212,4 +219,88 @@ body {
 
 .elkit-navGroup-itemIcon {
   margin-right: 6px;
+}
+
+.elkit-tabs {
+  display: flex;
+  height: 27px;
+  border-bottom: 1px solid #a5a5a5;
+  font-family: var(--elkit-tabs-fontFamily);
+  font-size: var(--elkit-tabs-fontSize);
+
+  background-image: linear-gradient(
+    to bottom,
+    #bcbcbc 0%,
+    #c8c8c8 100%
+  );
+
+  color: #333;
+  text-shadow: 0 1px rgba(255, 255, 255, .23);
+}
+
+.elkit-tabs-newTabBtn,
+.elkit-tabs-closeTabBtn {
+  border: 0;
+  padding: 1px 10px 0;
+  font-size: inherit;
+  color: #626262;
+  background-color: transparent;
+}
+
+.elkit-tabs-newTabBtn::-moz-focus-inner,
+.elkit-tabs-closeTabBtn::-moz-focus-inner {
+  border: 0;
+}
+
+.elkit-tabs-tabList {
+  display: flex;
+}
+
+.elkit-tabs-tab {
+  display: flex;
+  width: 182px;
+  border-left: 1px solid #afafaf;
+  padding-right: 13px;
+  padding-top: 1px;
+}
+
+.elkit-tabs-tab:only-child {
+  padding-right: 0;
+}
+
+.elkit-tabs-tab:only-child > .elkit-tabs-closeTabBtn {
+  display: none;
+}
+
+.elkit-tabs-tab:first-child,
+.elkit-tabs-tab--active + .elkit-tabs-tab {
+  border-left: 0;
+}
+
+.elkit-tabs-tab:last-child:not(.elkit-tabs-tab--active) {
+  border-right: 1px solid #afafaf;
+}
+
+.elkit-tabs-tab--active {
+  border-left: 1px solid #989698;
+  border-right: 1px solid #989698;
+  border-radius: 4px 4px 0 0;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .23);
+
+  background-image: linear-gradient(
+    to bottom,
+    #c8c8c8 0%,
+    #bcbcbc 100%
+  );
+}
+
+.elkit-tabs-tabName {
+  flex-grow: 1;
+  padding: 0 6px;
+  line-height: 25px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+  cursor: default;
 }
