@@ -1,9 +1,9 @@
 # Element Kit
 
 No time to explain. Code is worth a thousand words.
-But check out the demo:
+But check out the docs (WIP):
 
-[![Element Kit demo](demo.png)](https://n2liquid.github.io/elementkit/demo.html)
+[![Element Kit documentation](demo.png)](https://vessel-software.github.io/elementkit/index.html)
 
 ## License
 
