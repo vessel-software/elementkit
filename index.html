@@ -76,6 +76,13 @@
     font-size: 25px;
   }
 
+  .docItem-details {
+    margin-bottom: 25px;
+    box-shadow: -25px 15px 8px white, 25px 15px 8px white;
+    transform: translate(0);
+    z-index: 1;
+  }
+
   .docItem-details p {
     font-size: 16px;
     color: #555;
@@ -248,6 +255,10 @@
     color: #7a7a7a;
   }
 
+  .elk-paneGroup {
+    display: flex;
+  }
+
   .elk-sidebar {
     min-width: 194px;
     max-width: 230px;
@@ -294,6 +305,84 @@
 
   .elk-sidebar-navGroupItemIcon {
     margin-right: 6px;
+  }
+
+  .elk-pane {
+    flex-grow: 1;
+  }
+
+  .elk-pane.elk-mPlaceholder {
+    min-height: 100px;
+
+    background:
+      radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent),
+      radial-gradient(circle, transparent 20%, slategray 20%, slategray 80%, transparent 80%, transparent) 50px 50px,
+      linear-gradient(#a8b1bb 8px, transparent 8px) 0 -4px,
+      linear-gradient(90deg, #a8b1bb 8px, transparent 8px) -4px 0;
+
+    background-color: slategray;
+    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+    opacity: 0.3;
+  }
+
+  .elk-tabs {
+    display: flex;
+    align-items: stretch;
+    height: 28px;
+    border-bottom: 1px solid #a5a5a5;
+    text-shadow: 0 1px rgba(255, 255, 255, .23);
+
+    background-image: linear-gradient(
+      to bottom, #bcbcbc 0%, #c8c8c8 100%
+    );
+  }
+
+  .elk-tabs-tabList {
+    display: flex;
+    align-items: stretch;
+  }
+
+  .elk-tabs-tab {
+    display: flex;
+    align-items: center;
+    width: 144px;
+    border-left: 1px solid #afafaf;
+    padding-right: 23px;
+    padding-top: 1px;
+    font-size: 12px;
+    color: #333;
+  }
+
+  .elk-tabs-tab.elk-mActive {
+    border-left: 1px solid #989698;
+    border-right: 1px solid #989698;
+    border-radius: 4px 4px 0 0;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .23);
+
+    background-image: linear-gradient(
+      to bottom, #c8c8c8 0%, #bcbcbc 100%
+    )
+  }
+
+  .elk-tabs-tab:first-child {
+    border-left: 0;
+  }
+
+  .elk-tabs-closeTabBtn {
+    position: relative;
+    top: -1px;
+    display: inline-flex;
+    border: 0;
+    padding: 1px 10px 0;
+    font-size: 10px;
+    color: #5c5c5c;
+    background-color: transparent;
+  }
+
+  .elk-tabs-tabName {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
   }
 </style>
 
@@ -449,9 +538,50 @@
             </div>
           </div>
 
-          <div class="elk-pane">
+          <div class="elk-pane elk-mPlaceholder"></div>
+        </div>
+      </div>
+    </div>
+
+  <div class="docItem">
+    <div class="docItem-heading">
+      Tabbed pane (using tabs)
+    </div>
+
+    <div class="docItem-details">
+      <p>
+        The tabs component can be used e.g. to create
+        tabbed window panes.
+      </p>
+    </div>
+
+    <div class="docItem-example docItem-example--wnd">
+      <div class="elk-wnd">
+        <div class="elk-tabs">
+          <div class="elk-tabs-tabList">
+            <div class="elk-tabs-tab">
+              <button class="elk-tabs-closeTabBtn">
+                <i class="fa fa-times"></i>
+              </button>
+
+              <div class="elk-tabs-tabName">
+                /
+              </div>
+            </div>
+
+            <div class="elk-tabs-tab elk-mActive">
+              <button class="elk-tabs-closeTabBtn">
+                <i class="fa fa-times"></i>
+              </button>
+
+              <div class="elk-tabs-tabName">
+                Home
+              </div>
+            </div>
           </div>
         </div>
+
+        <div class="elk-pane elk-mPlaceholder"></div>
       </div>
     </div>
   </div>
