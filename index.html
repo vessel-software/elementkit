@@ -207,6 +207,8 @@
     display: flex;
     justify-content: space-between;
     align-items: stretch;
+    min-height: 38px;
+    padding: 0 8px;
     font-size: 12px;
 
     box-shadow: inset 1px 0 0 #cfcfcf,
@@ -217,12 +219,16 @@
     background-image: linear-gradient(
       to bottom, #e6e6e6, #c4c4c4
     );
+
+    cursor: default;
   }
 
-  .elk-tlb--wndHdr {
-    min-height: 34px;
+  .elk-tlb.elk-mHeader {
     border-bottom: 1px solid #989898;
-    cursor: default;
+  }
+
+  .elk-tlb.elk-mFooter {
+    border-top: 1px solid #989898;
   }
 
   .elk-tlb-leftBox,
@@ -255,6 +261,14 @@
 
   .elk-tlbIconBtn.elk-mStdBtn {
     margin: 0 13px;
+  }
+
+  .elk-tlbIconBtn.elk-mStdBtn:first-child {
+    margin-left: 5px;
+  }
+
+  .elk-tlbIconBtn.elk-mStdBtn:last-child {
+    margin-right: 5px;
   }
 
   .elk-tlb-wndTitle {
@@ -311,11 +325,16 @@
     margin-right: 6px;
   }
 
-  .elk-pane {
+  .elk-vPane {
     flex-grow: 1;
   }
 
-  .elk-pane.elk-mPlaceholder {
+  .elk-spacer {
+    flex-grow: 50;
+  }
+
+  .elk-spacer.elk-mPlaceholder {
+    display: flex;
     min-height: 100px;
 
     background:
@@ -325,7 +344,7 @@
       linear-gradient(90deg, #a8b1bb 8px, transparent 8px) -4px 0;
 
     background-color: slategray;
-    background-size:100px 100px, 100px 100px, 50px 50px, 50px 50px;
+    background-size: 100px 100px, 100px 100px, 50px 50px, 50px 50px;
     opacity: 0.3;
   }
 
@@ -383,10 +402,16 @@
   .elk-tabs-closeTabBtn,
   .elk-tabs-newTabBtn {
     display: inline-flex;
+    outline: 0;
     border: 0;
     padding: 1px 10px 0;
     font-size: 10px;
     background-color: transparent;
+  }
+
+  .elk-tabs-closeTabBtn::-moz-focus-inner,
+  .elk-tabs-newTabBtn::-moz-focus-inner {
+    border: 0;
   }
 
   .elk-tabs-closeTabBtn {
@@ -488,14 +513,13 @@
 
   <div class="docItem">
     <div class="docItem-heading">
-      Window with toolbar and sidebar
+      Window with toolbars and sidebar
     </div>
 
     <div class="docItem-details">
       <p>
         The toolbar component can be used to create
-        standard window header toolbars as well as others
-        kinds of toolbars.
+        standard window header and footer toolbars.
       </p>
 
       <p>
@@ -506,7 +530,7 @@
 
     <div class="docItem-example docItem-example--wnd">
       <div class="elk-wnd">
-        <div class="elk-tlb elk-tlb--wndHdr">
+        <div class="elk-tlb elk-tlb elk-mHeader">
           <div class="elk-tlb-leftBox">
             <button class="elk-tlbIconBtn elk-mStdBtn">
               <i class="fa fa-times"></i>
@@ -574,7 +598,36 @@
             </div>
           </div>
 
-          <div class="elk-pane elk-mPlaceholder"></div>
+          <div class="elk-vPane">
+            <div class="elk-spacer elk-mPlaceholder"></div>
+
+            <div class="elk-tlb elk-mFooter">
+              <div class="elk-tlb-leftBox">
+                <button class="elk-tlbIconBtn">
+                  <img
+                    class="elk-sidebar-navGroupItemIcon"
+                    src="icons/actions/24/go-previous.svg"
+                  >
+                </button>
+
+                <button class="elk-tlbIconBtn">
+                  <img
+                    class="elk-sidebar-navGroupItemIcon"
+                    src="icons/actions/24/go-next.svg"
+                  >
+                </button>
+              </div>
+
+              <div class="elk-tlb-rightBox">
+                <button class="elk-tlbIconBtn">
+                  <img
+                    class="elk-sidebar-navGroupItemIcon"
+                    src="icons/actions/24/edit-delete.svg"
+                  >
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -632,7 +685,9 @@
           </div>
         </div>
 
-        <div class="elk-pane elk-mPlaceholder"></div>
+        <div class="elk-vPane">
+          <div class="elk-spacer elk-mPlaceholder"></div>
+        </div>
       </div>
     </div>
 
@@ -692,7 +747,9 @@
           </button>
         </div>
 
-        <div class="elk-pane elk-mPlaceholder"></div>
+        <div class="elk-vPane">
+          <div class="elk-spacer elk-mPlaceholder"></div>
+        </div>
       </div>
     </div>
   </div>
