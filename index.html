@@ -245,6 +245,20 @@
     transform: translateX(-50%);
   }
 
+  .elk-mTlbGroup {
+    display: flex;
+  }
+
+  .elk-mTlbGroup + .elk-mTlbGroup,
+  .elk-mTlbGroup + .elk-mTlbGroupItem,
+  .elk-mTlbGroupItem + .elk-mTlbGroup {
+    margin-left: 10px;
+  }
+
+  .elk-mTlbGroupItem + .elk-mTlbGroupItem {
+    margin-left: 6px;
+  }
+
   .elk-tlbIconBtn {
     display: flex;
     outline: 0;
@@ -544,26 +558,37 @@
           </div>
 
           <div class="elk-tlb-rightBox">
-            <button class="elk-tlbIconBtn">
-              <img
-                class="elk-sidebar-navGroupItemIcon"
-                src="icons/actions/24/edit-undo.svg"
-              >
-            </button>
+            <div class="elk-mTlbGroup">
+              <button class="
+                elk-tlbIconBtn
+                elk-mTlbGroupItem
+              ">
+                <img
+                  class="elk-tlbIcon"
+                  src="icons/actions/24/edit-undo.svg"
+                >
+              </button>
 
-            <button class="elk-tlbIconBtn">
-              <img
-                class="elk-sidebar-navGroupItemIcon"
-                src="icons/actions/24/edit-redo.svg"
-              >
-            </button>
+              <button class="
+                elk-tlbIconBtn
+                elk-mTlbGroupItem
+              ">
+                <img
+                  class="elk-tlbIcon"
+                  src="icons/actions/24/edit-redo.svg"
+                >
+              </button>
 
-            <button class="elk-tlbIconBtn">
-              <img
-                class="elk-sidebar-navGroupItemIcon"
-                src="icons/actions/24/open-menu.svg"
-              >
-            </button>
+              <button class="
+                elk-tlbIconBtn
+                elk-mTlbGroupItem
+              ">
+                <img
+                  class="elk-tlbIcon"
+                  src="icons/actions/24/open-menu.svg"
+                >
+              </button>
+            </div>
 
             <button class="elk-tlbIconBtn elk-mStdBtn">
               <i class="fa fa-expand"></i>
@@ -603,25 +628,34 @@
 
             <div class="elk-tlb elk-mFooter">
               <div class="elk-tlb-leftBox">
-                <button class="elk-tlbIconBtn">
+                <button class="
+                  elk-tlbIconBtn
+                  elk-mTlbGroupItem
+                ">
                   <img
-                    class="elk-sidebar-navGroupItemIcon"
+                    class="elk-tlbIcon"
                     src="icons/actions/24/go-previous.svg"
                   >
                 </button>
 
-                <button class="elk-tlbIconBtn">
+                <button class="
+                  elk-tlbIconBtn
+                  elk-mTlbGroupItem
+                ">
                   <img
-                    class="elk-sidebar-navGroupItemIcon"
+                    class="elk-tlbIcon"
                     src="icons/actions/24/go-next.svg"
                   >
                 </button>
               </div>
 
               <div class="elk-tlb-rightBox">
-                <button class="elk-tlbIconBtn">
+                <button class="
+                  elk-tlbIconBtn
+                  elk-mTlbGroupItem
+                ">
                   <img
-                    class="elk-sidebar-navGroupItemIcon"
+                    class="elk-tlbIcon"
                     src="icons/actions/24/edit-delete.svg"
                   >
                 </button>
