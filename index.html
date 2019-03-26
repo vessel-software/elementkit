@@ -331,6 +331,41 @@
     background-color: transparent;
   }
 
+  .elk-btnBoxGroup {
+    display: flex;
+  }
+
+  .elk-btnBox {
+    outline: 0;
+    border: 1px solid #a4a4a4;
+    border-radius: 2px;
+    padding: 3px 10px;
+    font-size: 12px;
+    background-color: transparent;
+
+    box-shadow:
+      inset 0 1px 0 #efefef,
+      inset 0 -1px 0 #cecece;
+  }
+
+  .elk-btnBox::-moz-focus-inner {
+    border: 0;
+  }
+
+  .elk-btnBoxGroup > .elk-btnBox:not(:first-child) {
+    border-left: 0;
+  }
+
+  .elk-mNoBorderRadiusLeft {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  .elk-mNoBorderRadiusRight {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
   .elk-paneGroup {
     display: flex;
   }
@@ -685,37 +720,49 @@
 
             <div class="elk-tlb elk-mFooter">
               <div class="elk-tlb-leftBox">
-                <button class="
-                  elk-tlbIconBtn
-                  elk-mTlbGroupItem
-                ">
-                  <img
-                    class="elk-tlbIcon"
-                    src="icons/actions/24/go-previous.svg"
-                  >
-                </button>
+                <div class="elk-mTlbGroup">
+                  <button class="
+                    elk-tlbIconBtn
+                    elk-mTlbGroupItem
+                  ">
+                    <img
+                      class="elk-tlbIcon"
+                      src="icons/actions/24/go-previous.svg"
+                    >
+                  </button>
 
-                <button class="
-                  elk-tlbIconBtn
-                  elk-mTlbGroupItem
-                ">
-                  <img
-                    class="elk-tlbIcon"
-                    src="icons/actions/24/go-next.svg"
-                  >
-                </button>
+                  <button class="
+                    elk-tlbIconBtn
+                    elk-mTlbGroupItem
+                  ">
+                    <img
+                      class="elk-tlbIcon"
+                      src="icons/actions/24/go-next.svg"
+                    >
+                  </button>
+                </div>
               </div>
 
               <div class="elk-tlb-rightBox">
-                <button class="
-                  elk-tlbIconBtn
-                  elk-mTlbGroupItem
-                ">
-                  <img
-                    class="elk-tlbIcon"
-                    src="icons/actions/24/edit-delete.svg"
-                  >
-                </button>
+                <div class="elk-btnBoxGroup elk-mTlbGroup">
+                  <button class="
+                    elk-btnBox elk-mNoBorderRadiusRight
+                  ">
+                    <i class="fa fa-minus-square"></i>
+                  </button>
+
+                  <div class="
+                    elk-btnBox elk-mNoBorderRadius
+                  ">
+                    67%
+                  </div>
+
+                  <button class="
+                    elk-btnBox elk-mNoBorderRadiusLeft
+                  ">
+                    <i class="fa fa-plus-square"></i>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
